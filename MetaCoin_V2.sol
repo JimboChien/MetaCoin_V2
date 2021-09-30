@@ -8,11 +8,9 @@ contract MetaCoin_V2 {
 	// Original MetaCoin Function
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 	
-	/*    
 	constructor() public {
 		balances[tx.origin] = 10000;
 	}
-	*/
 	
 	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (balances[msg.sender] < amount) return false;
